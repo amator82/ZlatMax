@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+**/*.zip
+node_modules/
+package-lock.json
+version.json
+**/*fontawesome-free-5.12.0-web
+gulp/
