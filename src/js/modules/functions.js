@@ -44,7 +44,7 @@ export let isMobile = {
         )
     }
 }
-//* Добавление класса touch для HTML если браузер мобильный
+//! Добавление класса touch для HTML если браузер мобильный
 export function addTouchClass() {
     //* Добавление класса _touch для HTML если браузер мобильный
     if (isMobile.any()) document.documentElement.classList.add('touch')
