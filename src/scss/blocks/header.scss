@@ -23,6 +23,8 @@
         flex: 1 1 auto;
     }
     &__user {
+        z-index: 5;
+        position: relative;
         display: inline-flex;
         align-items: center;
         font-weight: 600;
@@ -58,7 +60,7 @@
         @include adaptiveValue('column-gap', 60, 20);
         @media (max-width: $tablet) {
             flex-direction: column;
-            row-gap: 15px;
+            row-gap: 25px;
         }
     }
     &__item {
@@ -77,9 +79,10 @@
             }
         }
         @media (max-width: $tablet) {
-            @include adaptiveValue('font-size', 30, 18, 992, 320, 1);
+            @include adaptiveValue('font-size', 30, 20, 992, 320, 1);
         }
         &_catalog {
+            align-items: center;
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
@@ -90,7 +93,7 @@
                 flex: 0 0 14px;
                 height: 14px;
                 font-size: rem(8);
-                transform: rotate(-90deg);
+                transform: translateY(rem(-2)) rotate(-90deg);
             }
         }
     }
@@ -104,7 +107,7 @@
     &__body {
         @media (max-width: $tablet) {
             z-index: 4;
-            padding: rem(80) rem(10) rem(50) rem(10);
+            padding: rem(100) rem(10) rem(50) rem(10);
             position: fixed;
             width: 100%;
             height: 100%;
@@ -112,6 +115,22 @@
             left: -100%;
             overflow: auto;
             background-color: $black;
+            transition: left 0.3s ease 0s;
+            &::before {
+                content: '';
+                position: fixed;
+                width: 100%;
+                height: 70px;
+                top: 0;
+                left: -100%;
+                background-color: $black;
+            }
+            .menu-open & {
+                left: 0;
+                &::before {
+                    left: 0;
+                }
+            }
         }
     }
 }
@@ -257,12 +276,16 @@
     &__phones {
     }
     &__favorite {
+        z-index: 5;
+        position: relative;
         font-size: rem(27);
     }
     &__cart {
     }
 }
 .phones-header {
+    z-index: 5;
+    position: relative;
     &__items {
     }
     &__item {
@@ -339,6 +362,8 @@
     }
 }
 .cart-header {
+    z-index: 5;
+    position: relative;
     align-items: center;
     display: flex;
     column-gap: 15px;
@@ -399,29 +424,43 @@
 }
 .menu-catalog {
     @media (max-width: $tablet) {
+        @include adaptiveValue('font-size', 30, 20, 992, 320, 1);
         position: fixed;
         top: 0;
         left: -100%;
         width: 100%;
         height: 100%;
         overflow: auto;
+        background-color: $black;
+        padding: rem(100) rem(10) rem(50) rem(10);
+        transition: all 0.3s ease 0s;
+        .catalog-open & {
+            z-index: 6;
+            left: 0;
+        }
     }
     &__list {
         display: flex;
-        gap: 10px;
+        column-gap: 10px;
         justify-content: space-between;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            row-gap: rem(25);
+        }
     }
     &__item {
     }
     &__link {
         position: relative;
-        padding: 0 rem(10);
-        min-height: rem(70);
         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         transition: color 0.3s ease 0s;
+        @media (min-width: $tablet) {
+            padding: 0 rem(10);
+            min-height: rem(70);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
         &::after {
             content: '';
             opacity: 0;

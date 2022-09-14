@@ -278,6 +278,8 @@ body::after {
   flex: 1 1 auto;
 }
 .top-header__user {
+  z-index: 5;
+  position: relative;
   display: inline-flex;
   align-items: center;
   font-weight: 600;
@@ -325,7 +327,7 @@ body::after {
 @media (max-width: 61.99875em) {
   .menu-top-header__list {
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 25px;
   }
 }
 @media (min-width: 61.99875em) {
@@ -343,20 +345,21 @@ body::after {
   }
 }
 @media (max-width: 61.99875em) {
-  @supports (font-size: clamp( 1.125rem , 0.7678571429rem  +  1.7857142857vw , 1.875rem )) {
+  @supports (font-size: clamp( 1.25rem , 0.9523809524rem  +  1.4880952381vw , 1.875rem )) {
     .menu-top-header__link {
-      font-size: clamp( 1.125rem , 0.7678571429rem  +  1.7857142857vw , 1.875rem );
+      font-size: clamp( 1.25rem , 0.9523809524rem  +  1.4880952381vw , 1.875rem );
     }
   }
-  @supports not (font-size: clamp( 1.125rem , 0.7678571429rem  +  1.7857142857vw , 1.875rem )) {
+  @supports not (font-size: clamp( 1.25rem , 0.9523809524rem  +  1.4880952381vw , 1.875rem )) {
     .menu-top-header__link {
       font-size: calc(
-            1.125rem + 0.75 * (100vw - 20rem) / 42
+            1.25rem + 0.625 * (100vw - 20rem) / 42
         );
     }
   }
 }
 .menu-top-header__link_catalog {
+  align-items: center;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -368,7 +371,7 @@ body::after {
   flex: 0 0 14px;
   height: 14px;
   font-size: 0.5rem;
-  transform: rotate(-90deg);
+  transform: translateY(-0.125rem) rotate(-90deg);
 }
 
 @media (max-width: 61.99875em) {
@@ -381,7 +384,7 @@ body::after {
 @media (max-width: 61.99875em) {
   .menu__body {
     z-index: 4;
-    padding: 5rem 0.625rem 3.125rem 0.625rem;
+    padding: 6.25rem 0.625rem 3.125rem 0.625rem;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -389,6 +392,22 @@ body::after {
     left: -100%;
     overflow: auto;
     background-color: #141414;
+    transition: left 0.3s ease 0s;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    left: -100%;
+    background-color: #141414;
+  }
+  .menu-open .menu__body {
+    left: 0;
+  }
+  .menu-open .menu__body::before {
+    left: 0;
   }
 }
 
@@ -561,7 +580,13 @@ body::after {
   }
 }
 .actions-header__favorite {
+  z-index: 5;
+  position: relative;
   font-size: 1.6875rem;
+}
+.phones-header {
+  z-index: 5;
+  position: relative;
 }
 .phones-header__item {
   position: relative;
@@ -641,6 +666,8 @@ body::after {
 }
 
 .cart-header {
+  z-index: 5;
+  position: relative;
   align-items: center;
   display: flex;
   column-gap: 15px;
@@ -707,22 +734,51 @@ body::after {
     width: 100%;
     height: 100%;
     overflow: auto;
+    background-color: #141414;
+    padding: 6.25rem 0.625rem 3.125rem 0.625rem;
+    transition: all 0.3s ease 0s;
+  }
+  @supports (font-size: clamp( 1.25rem , 0.9523809524rem  +  1.4880952381vw , 1.875rem )) {
+    .menu-catalog {
+      font-size: clamp( 1.25rem , 0.9523809524rem  +  1.4880952381vw , 1.875rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.25rem , 0.9523809524rem  +  1.4880952381vw , 1.875rem )) {
+    .menu-catalog {
+      font-size: calc(
+            1.25rem + 0.625 * (100vw - 20rem) / 42
+        );
+    }
+  }
+  .catalog-open .menu-catalog {
+    z-index: 6;
+    left: 0;
   }
 }
 .menu-catalog__list {
   display: flex;
-  gap: 10px;
+  column-gap: 10px;
   justify-content: space-between;
+}
+@media (max-width: 61.99875em) {
+  .menu-catalog__list {
+    flex-direction: column;
+    row-gap: 1.5625rem;
+  }
 }
 .menu-catalog__link {
   position: relative;
-  padding: 0 0.625rem;
-  min-height: 4.375rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   transition: color 0.3s ease 0s;
+}
+@media (min-width: 61.99875em) {
+  .menu-catalog__link {
+    padding: 0 0.625rem;
+    min-height: 4.375rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .menu-catalog__link::after {
   content: "";
