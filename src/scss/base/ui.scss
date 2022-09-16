@@ -9,3 +9,20 @@
         object-fit: cover;
     }
 }
+.button {
+    display: inline-flex;
+    background-color: $orange;
+    box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43);
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: rem(20);
+    padding: rem(8) rem(52);
+    line-height: math.div(32, 20);
+    color: #fff;
+    transition: box-shadow 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 4px 25px rgba(232, 170, 49, 0.63);
+        }
+    }
+}

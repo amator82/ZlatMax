@@ -163,6 +163,24 @@ h6 {
   object-fit: cover;
 }
 
+.button {
+  display: inline-flex;
+  background-color: #e8aa31;
+  box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43);
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 0.5rem 3.25rem;
+  line-height: 1.6;
+  color: #fff;
+  transition: box-shadow 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .button:hover {
+    box-shadow: 0px 4px 25px rgba(232, 170, 49, 0.63);
+  }
+}
+
 body {
   color: #000;
   font-size: 1.125rem;
