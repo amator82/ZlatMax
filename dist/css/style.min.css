@@ -1044,3 +1044,73 @@ body::after {
     text-decoration: underline;
   }
 }
+
+.main-block {
+  background: url("../../img/main-block/background.jpg") center/cover no-repeat;
+}
+@supports (padding-top: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.5rem )) {
+  .main-block {
+    padding-top: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.5rem );
+  }
+}
+@supports not (padding-top: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.5rem )) {
+  .main-block {
+    padding-top: calc(
+            1.25rem + 1.25 * (100vw - 20rem) / 81.25
+        );
+  }
+}
+@supports (padding-bottom: clamp( 1.25rem , 0.6346153846rem  +  3.0769230769vw , 3.75rem )) {
+  .main-block {
+    padding-bottom: clamp( 1.25rem , 0.6346153846rem  +  3.0769230769vw , 3.75rem );
+  }
+}
+@supports not (padding-bottom: clamp( 1.25rem , 0.6346153846rem  +  3.0769230769vw , 3.75rem )) {
+  .main-block {
+    padding-bottom: calc(
+            1.25rem + 2.5 * (100vw - 20rem) / 81.25
+        );
+  }
+}
+.main-block__body {
+  display: grid;
+  grid-template-columns: 1fr 39.6875%;
+}
+.slide-main-block__content {
+  color: #fff;
+  padding: 0px 2.5rem 0px 0px;
+}
+@supports (margin-bottom: clamp( 1.875rem , 1.4134615385rem  +  2.3076923077vw , 3.75rem )) {
+  .slide-main-block__content:not(:last-child) {
+    margin-bottom: clamp( 1.875rem , 1.4134615385rem  +  2.3076923077vw , 3.75rem );
+  }
+}
+@supports not (margin-bottom: clamp( 1.875rem , 1.4134615385rem  +  2.3076923077vw , 3.75rem )) {
+  .slide-main-block__content:not(:last-child) {
+    margin-bottom: calc(
+            1.875rem + 1.875 * (100vw - 20rem) / 81.25
+        );
+  }
+}
+.slide-main-block__title {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.2777777778;
+  letter-spacing: 0.03em;
+}
+.slide-main-block__title:not(:last-child) {
+  margin-bottom: 0.4166666667em;
+}
+.slide-main-block__sub-title {
+  font-size: 2.25rem;
+  line-height: 1.2777777778;
+  letter-spacing: 0.03em;
+}
+.slide-main-block__sub-title:not(:last-child) {
+  margin-bottom: 0.8333333333em;
+}
+.slide-main-block__text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
