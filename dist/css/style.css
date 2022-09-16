@@ -1132,3 +1132,30 @@ body::after {
   font-size: 1.25rem;
   line-height: 1.5;
 }
+.media-main-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9375rem;
+}
+.media-main-block__image {
+  position: relative;
+}
+.media-main-block__image img {
+  position: relative;
+  z-index: 2;
+}
+.media-main-block__image::before {
+  content: "";
+  position: absolute;
+  width: 423px;
+  height: 423px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  bottom: 1%;
+  right: 0;
+  transform: translate(30.9692671395%, 0px);
+}
+.advantages-main__text {
+  color: #fff;
+}

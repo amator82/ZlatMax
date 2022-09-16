@@ -57,10 +57,28 @@
     &__button {
     }
 }
-.button {
-}
 .media-main-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(15);
     &__image {
+        position: relative;
+        img {
+            position: relative;
+            z-index: 2;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 423px;
+            height: 423px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            bottom: 1%;
+            right: 0;
+            transform: translate(percent(131, 423), 0px);
+        }
     }
     &__tips {
     }
@@ -78,7 +96,7 @@
     }
     &__icon {
     }
-
     &__text {
+        color: #fff;
     }
 }
