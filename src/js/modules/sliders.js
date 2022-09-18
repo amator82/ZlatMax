@@ -4,7 +4,6 @@ function initSliders() {
     if (document.querySelector('.main-block__slider')) {
         new Swiper('.main-block__slider', {
             modules: [Pagination],
-            // observer: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 0,
