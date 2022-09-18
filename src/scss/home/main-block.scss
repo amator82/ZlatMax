@@ -11,6 +11,7 @@
     }
     &__body {
         display: grid;
+        align-items: start;
         grid-template-columns: 1fr percent(635, 1600);
     }
     &__slider {
@@ -18,12 +19,59 @@
         padding: 0px rem(30);
     }
     &__swiper {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+        &.swiper-wrapper {
+            height: auto;
+        }
     }
     &__slide {
     }
     &__media {
     }
     &__advantages {
+    }
+    &__controll {
+    }
+}
+.controll-main-block {
+    display: grid;
+    align-items: center;
+    gap: rem(20);
+    &__dotts {
+        display: flex;
+        gap: rem(15);
+        .swiper-pagination-bullet {
+            flex: 0 0 15px;
+            height: 2px;
+            background-color: #fff;
+        }
+        .swiper-pagination-bullet-active {
+            position: relative;
+            background-color: $orange;
+            &::before {
+                content: '';
+                position: absolute;
+                width: rem(10);
+                height: rem(10);
+                border-radius: 50%;
+                top: 50%;
+                left: 0;
+                transform: translate(0px, -50%);
+                background-color: $orange;
+            }
+        }
+    }
+    &__fraction {
+        display: flex;
+        color: #fff;
+    }
+}
+.fraction-controll {
+    &__current {
+    }
+    &__all {
     }
 }
 .slide-main-block {

@@ -1213,12 +1213,53 @@ body::after {
 }
 .main-block__body {
   display: grid;
+  align-items: start;
   grid-template-columns: 1fr 39.6875%;
 }
 .main-block__slider {
   margin: 0px -1.875rem;
   padding: 0px 1.875rem;
 }
+.main-block__swiper:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+.main-block__swiper.swiper-wrapper {
+  height: auto;
+}
+.controll-main-block {
+  display: grid;
+  align-items: center;
+  gap: 1.25rem;
+}
+.controll-main-block__dotts {
+  display: flex;
+  gap: 0.9375rem;
+}
+.controll-main-block__dotts .swiper-pagination-bullet {
+  flex: 0 0 15px;
+  height: 2px;
+  background-color: #fff;
+}
+.controll-main-block__dotts .swiper-pagination-bullet-active {
+  position: relative;
+  background-color: #e8aa31;
+}
+.controll-main-block__dotts .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translate(0px, -50%);
+  background-color: #e8aa31;
+}
+.controll-main-block__fraction {
+  display: flex;
+  color: #fff;
+}
+
 .slide-main-block__content {
   color: #fff;
   padding: 0px 2.5rem 0px 0px;
