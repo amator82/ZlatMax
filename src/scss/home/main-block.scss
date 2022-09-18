@@ -45,13 +45,26 @@
         grid-auto-flow: column;
         gap: rem(15);
         .swiper-pagination-bullet {
-            width: 15px;
-            height: 2px;
-            background-color: #fff;
+            cursor: pointer;
+            height: rem(40);
+            width: rem(18);
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                height: rem(2);
+                width: 100%;
+                top: 50%;
+                transform: translate(0px, -50%);
+                background-color: #fff;
+                transition: all 0.3s ease 0s;
+            }
         }
         .swiper-pagination-bullet-active {
-            position: relative;
-            background-color: $orange;
+            width: rem(30);
+            &::after {
+                background-color: $orange;
+            }
             &::before {
                 content: '';
                 position: absolute;

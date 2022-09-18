@@ -1238,12 +1238,25 @@ body::after {
   gap: 0.9375rem;
 }
 .controll-main-block__dotts .swiper-pagination-bullet {
-  width: 15px;
-  height: 2px;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 1.125rem;
+  position: relative;
+}
+.controll-main-block__dotts .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  height: 0.125rem;
+  width: 100%;
+  top: 50%;
+  transform: translate(0px, -50%);
   background-color: #fff;
+  transition: all 0.3s ease 0s;
 }
 .controll-main-block__dotts .swiper-pagination-bullet-active {
-  position: relative;
+  width: 1.875rem;
+}
+.controll-main-block__dotts .swiper-pagination-bullet-active::after {
   background-color: #e8aa31;
 }
 .controll-main-block__dotts .swiper-pagination-bullet-active::before {
