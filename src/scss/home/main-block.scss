@@ -36,14 +36,16 @@
     }
 }
 .controll-main-block {
-    display: grid;
+    display: inline-grid;
+    grid-auto-flow: column;
     align-items: center;
     gap: rem(20);
     &__dotts {
-        display: flex;
+        display: inline-grid;
+        grid-auto-flow: column;
         gap: rem(15);
         .swiper-pagination-bullet {
-            flex: 0 0 15px;
+            width: 15px;
             height: 2px;
             background-color: #fff;
         }
