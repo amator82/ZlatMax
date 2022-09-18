@@ -14,6 +14,8 @@
         grid-template-columns: 1fr percent(635, 1600);
     }
     &__slider {
+        margin: 0px rem(-30);
+        padding: 0px rem(30);
     }
     &__swiper {
     }

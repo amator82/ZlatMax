@@ -1215,6 +1215,10 @@ body::after {
   display: grid;
   grid-template-columns: 1fr 39.6875%;
 }
+.main-block__slider {
+  margin: 0px -1.875rem;
+  padding: 0px 1.875rem;
+}
 .slide-main-block__content {
   color: #fff;
   padding: 0px 2.5rem 0px 0px;

@@ -6,7 +6,7 @@ function initSliders() {
             modules: [Pagination],
             observeParents: true,
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 50,
             speed: 800,
             pagination: {
                 el: '.controll-main-block__dotts',
