@@ -49,6 +49,7 @@
             height: rem(40);
             width: rem(18);
             position: relative;
+            transition: all 0.3s ease 0s;
             &::after {
                 content: '';
                 position: absolute;
@@ -57,13 +58,6 @@
                 top: 50%;
                 transform: translate(0px, -50%);
                 background-color: #fff;
-                transition: all 0.3s ease 0s;
-            }
-        }
-        .swiper-pagination-bullet-active {
-            width: rem(30);
-            &::after {
-                background-color: $orange;
             }
             &::before {
                 content: '';
@@ -74,6 +68,18 @@
                 top: 50%;
                 left: 0;
                 transform: translate(0px, -50%);
+                background-color: $orange;
+                opacity: 0;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            width: rem(30);
+            &::before {
+                transition: left 3s linear 0s;
+                opacity: 1;
+                left: rem(20);
+            }
+            &::after {
                 background-color: $orange;
             }
         }

@@ -1,14 +1,18 @@
-import Swiper, { Pagination, Parallax } from 'swiper'
+import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper'
 
 function initSliders() {
     if (document.querySelector('.main-block__slider')) {
         new Swiper('.main-block__slider', {
-            modules: [Pagination, Parallax],
+            modules: [Pagination, Parallax, Autoplay],
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 50,
             speed: 800,
             parallax: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: '.controll-main-block__dotts',
                 clickable: true

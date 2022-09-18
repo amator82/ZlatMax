@@ -1242,6 +1242,7 @@ body::after {
   height: 2.5rem;
   width: 1.125rem;
   position: relative;
+  transition: all 0.3s ease 0s;
 }
 .controll-main-block__dotts .swiper-pagination-bullet::after {
   content: "";
@@ -1251,15 +1252,8 @@ body::after {
   top: 50%;
   transform: translate(0px, -50%);
   background-color: #fff;
-  transition: all 0.3s ease 0s;
 }
-.controll-main-block__dotts .swiper-pagination-bullet-active {
-  width: 1.875rem;
-}
-.controll-main-block__dotts .swiper-pagination-bullet-active::after {
-  background-color: #e8aa31;
-}
-.controll-main-block__dotts .swiper-pagination-bullet-active::before {
+.controll-main-block__dotts .swiper-pagination-bullet::before {
   content: "";
   position: absolute;
   width: 0.625rem;
@@ -1268,6 +1262,18 @@ body::after {
   top: 50%;
   left: 0;
   transform: translate(0px, -50%);
+  background-color: #e8aa31;
+  opacity: 0;
+}
+.controll-main-block__dotts .swiper-pagination-bullet-active {
+  width: 1.875rem;
+}
+.controll-main-block__dotts .swiper-pagination-bullet-active::before {
+  transition: left 3s linear 0s;
+  opacity: 1;
+  left: 1.25rem;
+}
+.controll-main-block__dotts .swiper-pagination-bullet-active::after {
   background-color: #e8aa31;
 }
 .controll-main-block__fraction {
