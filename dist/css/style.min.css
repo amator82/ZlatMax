@@ -1481,14 +1481,30 @@ body::after {
 .advantages-main {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 0.625rem;
+  gap: 1.25rem;
   justify-content: space-between;
 }
+@media (max-width: 61.99875em) {
+  .advantages-main {
+    row-gap: 1.875rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media (max-width: 47.99875em) {
+  .advantages-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .advantages-main__item {
-  display: grid;
+  display: inline-grid;
+  grid-template-rows: 77px auto;
   text-align: center;
   gap: 1.0625rem;
   max-width: 18.125rem;
+}
+.advantages-main__icon {
+  align-self: center;
 }
 .advantages-main__text {
   font-weight: 600;
