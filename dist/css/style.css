@@ -1186,7 +1186,7 @@ body::after {
 }
 
 .main-block {
-  background: url("../../img/main-block/background.jpg") center/cover no-repeat;
+  background: url("../../img/home/main-block/background.jpg") center/cover no-repeat;
 }
 @supports (padding-top: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.5rem )) {
   .main-block {
