@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 @import './base/mixins.scss';
 //! <Подключение шрифтов>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap');
@@ -9,7 +9,6 @@
 @import './base/fonts.scss';
 @import './fonts/icons.scss';
 //! </Иконочные шрифты>
-
 
 //! <Переменные>
 @import './base/variables.scss';
@@ -37,13 +36,13 @@ body {
     display: flex;
     flex-direction: column;
     //* Прижимаем footer
-	> main {
-		flex: 1 1 auto;
-	}
-	//* Фикс для слайдеров
-	> * {
-		min-width: 0;
-	}
+    > main {
+        flex: 1 1 auto;
+    }
+    //* Фикс для слайдеров
+    > * {
+        min-width: 0;
+    }
 }
 @if ($responsiveType==1) {
     // Отзывчивая
@@ -92,5 +91,6 @@ body {
 //! <Подключение блоков>
 @import './home/header.scss';
 @import './home/main-block.scss';
+@import './home/catalog.scss';
 @import './home/footer.scss';
 //! </Подключение блоков>
