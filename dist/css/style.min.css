@@ -1216,6 +1216,18 @@ body::after {
   align-items: start;
   grid-template-columns: 1fr 39.6875%;
 }
+@supports (margin-bottom: clamp( 1.875rem , 1.675rem  +  1vw , 2.6875rem )) {
+  .main-block__body:not(:last-child) {
+    margin-bottom: clamp( 1.875rem , 1.675rem  +  1vw , 2.6875rem );
+  }
+}
+@supports not (margin-bottom: clamp( 1.875rem , 1.675rem  +  1vw , 2.6875rem )) {
+  .main-block__body:not(:last-child) {
+    margin-bottom: calc(
+            1.875rem + 0.8125 * (100vw - 20rem) / 81.25
+        );
+  }
+}
 .main-block__slider {
   margin: 0px -1.875rem;
   padding: 0px 1.875rem;
@@ -1416,6 +1428,21 @@ body::after {
   right: 5.8700209644%;
 }
 
+.advantages-main {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 0.625rem;
+  justify-content: space-between;
+}
+.advantages-main__item {
+  display: grid;
+  text-align: center;
+  gap: 1.0625rem;
+  max-width: 18.125rem;
+}
 .advantages-main__text {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.6;
   color: #fff;
 }
