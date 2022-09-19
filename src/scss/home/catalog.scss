@@ -1,0 +1,56 @@
+.page {
+    &__catalog-cards {
+    }
+}
+.catalog-cards {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+    }
+    &__item {
+    }
+}
+.item-catalog-cards {
+    padding: rem(30);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    &__body {
+        position: relative;
+        z-index: 2;
+    }
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: em(30, 24);
+        }
+    }
+    &__link-title {
+        display: inline-block;
+        font-weight: 600;
+        font-size: rem(24);
+        line-height: math.div(34, 24);
+        &::after {
+            content: '';
+            margin: rem(15) 0px 0px 0px;
+            display: block;
+            width: rem(70);
+            height: rem(2);
+            background-color: $orange;
+            transition: width 0.3s ease 0s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__list {
+    }
+    &__item {
+    }
+    &__link {
+    }
+    &__image {
+    }
+}
