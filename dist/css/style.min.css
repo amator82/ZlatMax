@@ -1236,10 +1236,11 @@ body::after {
   display: inline-grid;
   grid-auto-flow: column;
   gap: 0.9375rem;
+  transform: translate(0px, 10%);
 }
 .controll-main-block__dotts .swiper-pagination-bullet {
   cursor: pointer;
-  height: 2.5rem;
+  height: 1.875rem;
   width: 1.125rem;
   position: relative;
   transition: all 0.3s ease 0s;
@@ -1276,9 +1277,19 @@ body::after {
 .controll-main-block__dotts .swiper-pagination-bullet-active::after {
   background-color: #e8aa31;
 }
-.controll-main-block__fraction {
+.fraction-controll {
   display: flex;
+  align-items: flex-end;
   color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.fraction-controll__current {
+  color: #e8aa31;
+  font-size: 1.5rem;
+}
+.fraction-controll__all {
+  font-size: 1.125rem;
 }
 
 .slide-main-block__content {

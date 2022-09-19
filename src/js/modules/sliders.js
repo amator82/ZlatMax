@@ -6,6 +6,7 @@ function initSliders() {
             modules: [Pagination, Parallax, Autoplay],
             observeParents: true,
             slidesPerView: 1,
+            loop: true,
             spaceBetween: 50,
             speed: 800,
             parallax: true,
@@ -17,7 +18,31 @@ function initSliders() {
                 el: '.controll-main-block__dotts',
                 clickable: true
             },
-            on: {}
+            on: {
+                init: function (swiper) {
+                    const allSlides = document.querySelector(
+                        '.fraction-controll__all'
+                    )
+                    const allSlidesItems = document.querySelectorAll(
+                        '.slide-main-block:not(.swiper-slide-duplicate)'
+                    )
+
+                    allSlides.innerHTML =
+                        allSlidesItems.length < 10
+                            ? `0${allSlidesItems.length}`
+                            : allSlidesItems.length
+                },
+                slideChange: function (swiper) {
+                    const currentSlide = document.querySelector(
+                        '.fraction-controll__current'
+                    )
+
+                    currentSlide.innerHTML =
+                        swiper.realIndex + 1 < 10
+                            ? `0${swiper.realIndex + 1}`
+                            : swiper.realIndex + 1
+                }
+            }
         })
     }
 }
