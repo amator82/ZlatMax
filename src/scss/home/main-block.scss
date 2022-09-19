@@ -12,9 +12,12 @@
     &__body {
         display: grid;
         align-items: start;
-        grid-template-columns: 1fr percent(635, 1600);
+        row-gap: rem(40);
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 43, 30);
+        }
+        @media (min-width: $tablet) {
+            grid-template-columns: 1fr percent(635, 1600);
         }
     }
     &__slider {
@@ -108,14 +111,16 @@
 .slide-main-block {
     &__content {
         color: #fff;
-        padding: 0px rem(40) 0px 0px;
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 60, 30);
         }
+        @media (min-width: $tablet) {
+            padding: 0px rem(40) 0px 0px;
+        }
     }
     &__title {
+        @include adaptiveValue('font-size', 36, 22, 992, 320, 1);
         font-weight: 700;
-        font-size: rem(36);
         line-height: math.div(46, 36);
         letter-spacing: 0.03em;
         &:not(:last-child) {
@@ -123,7 +128,7 @@
         }
     }
     &__sub-title {
-        font-size: rem(36);
+        @include adaptiveValue('font-size', 36, 22, 992, 320, 1);
         line-height: math.div(46, 36);
         letter-spacing: 0.03em;
         &:not(:last-child) {
@@ -131,11 +136,14 @@
         }
     }
     &__text {
+        @include adaptiveValue('font-size', 20, 16, 992, 320, 1);
         color: rgba(255, 255, 255, 0.7);
-        font-size: rem(20);
         line-height: math.div(30, 20);
     }
     &__button {
+        @media (max-width:$mobileSmall){
+             width: 100%; 
+        }
     }
 }
 .media-main-block {
@@ -148,14 +156,15 @@
     }
     &__image {
         img {
+            width: 100%;
             position: relative;
             z-index: 2;
         }
         &::before {
             content: '';
             position: absolute;
-            width: 423px;
-            height: 423px;
+            width: percent(423, 499);
+            padding-bottom: percent(423, 499);
             border: 2px solid rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             bottom: 3.5%;
