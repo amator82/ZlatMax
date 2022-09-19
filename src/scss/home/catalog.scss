@@ -3,6 +3,8 @@
     }
 }
 .catalog-cards {
+    @include adaptiveValue('padding-top', 100, 30);
+    @include adaptiveValue('padding-bottom', 70, 30);
     &__container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
@@ -48,8 +50,30 @@
     &__list {
     }
     &__item {
+        position: relative;
+        padding: 0px 0px 0px rem(20);
+        &::before {
+            content: '';
+            width: rem(6);
+            height: rem(6);
+            background-color: $orange;
+            border-radius: 50%;
+            position: absolute;
+            top: em(8, 18);
+            left: 0;
+        }
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
     }
     &__link {
+        font-size: rem(18);
+        line-height: math.div(24, 18);
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     &__image {
     }
