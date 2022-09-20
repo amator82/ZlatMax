@@ -152,16 +152,20 @@ h6 {
   font-size: inherit;
 }
 
-._ibg {
+[class*=-ibg] {
   position: relative;
 }
-._ibg img {
+[class*=-ibg] img {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  object-fit: contain;
 }
 
 .button {
