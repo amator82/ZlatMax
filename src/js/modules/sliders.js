@@ -45,6 +45,28 @@ function initSliders() {
             }
         })
     }
+
+    if (document.querySelector('.products__slider')) {
+        new Swiper('.products__slider', {
+            modules: [Pagination],
+            observeParents: true,
+            slidesPerView: 4,
+            // loop: true,
+            watchOverflow: true,
+            spaceBetween: 30,
+            speed: 800,
+            parallax: true,
+            pagination: {
+                el: '.products-slider__dotts',
+                clickable: true
+            },
+            on: {
+                // init: function(swiper){
+
+                // }
+            }
+        })
+    }
 }
 function initSlidersScroll() {
     let sliderScrollItems = document.querySelectorAll('.swiper_scroll')
