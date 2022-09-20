@@ -1,7 +1,7 @@
 .rating {
     display: flex;
     align-items: flex-end;
-    font-size: 40px;
+    font-size: rem(30);
     line-height: 0.75;
     transition: opacity 0.3s ease 0s;
 }
@@ -12,9 +12,9 @@
 .rating.rating_set .rating__item {
     cursor: pointer;
 }
-
 .rating__body {
     position: relative;
+    letter-spacing: em(8, 30);
 }
 .rating__body::before {
     content: '★★★★★';
@@ -35,7 +35,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    color: #ffd300;
+    color: $orange;
 }
 .rating__items {
     display: flex;
@@ -51,7 +51,12 @@
     opacity: 0;
 }
 .rating__value {
+    display: none;
     font-size: 50%;
     line-height: 1;
     padding: 0px 0px 0px 10px;
+}
+.rating__info {
+    color: #ababab;
+    font-size: rem(16);
 }
