@@ -345,9 +345,9 @@ export function menuInit() {
 }
 //! </Модуль работы со спойлерами >
 
-export function FLS(message) {
+export function MTR(message) {
     setTimeout(() => {
-        if (window.FLS) {
+        if (window.MTR) {
             console.log(message)
         }
     }, 0)

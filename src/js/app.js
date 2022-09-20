@@ -1,11 +1,14 @@
-import * as flsFunctions from './modules/functions.js'
+import * as mtrFunctions from './modules/functions.js'
 
-flsFunctions.isWebp()
-flsFunctions.menuInit();
-flsFunctions.spollers();
+mtrFunctions.isWebp()
+mtrFunctions.menuInit();
+mtrFunctions.spollers();
 
 import './modules/popup.js'
 import './modules/dynamic_adapt.js'
 import './modules/tippy.js'
 import './modules/sliders.js'
 import './modules/script.js'
+
+import * as mtrForms from './modules/forms.js'
+mtrForms.formRating()

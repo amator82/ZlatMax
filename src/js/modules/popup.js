@@ -4,9 +4,9 @@ import {
     bodyLock,
     bodyUnlock,
     bodyLockToggle,
-    FLS
+    MTR
 } from './functions.js'
-import { flsModules } from './modules.js'
+import { mtrModules } from './modules.js'
 
 // Класс Popup
 class Popup {
@@ -461,8 +461,8 @@ class Popup {
     }
     // Функция вывода в консоль
     popupLogging(message) {
-        this.options.logging ? FLS(`[Попапос]: ${message}`) : null
+        this.options.logging ? MTR(`[Попапос]: ${message}`) : null
     }
 }
 // Запускаем и добавляем в объект модулей
-flsModules.popup = new Popup({})
+mtrModules.popup = new Popup({})
