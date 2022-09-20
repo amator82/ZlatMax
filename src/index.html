@@ -6,7 +6,10 @@
             <main class="page page_home">
                 @@include('html/home/main-block.html', {})
                 @@include('html/home/catalog.html', {})
-                @@include('html/home/product-card.html', {})
+                @@include('html/base/products-slider.html', {
+                    "title":"Хиты продаж",
+                    "main-link": "Все акции"
+                })
             </main>
             @@include('html/base/footer.html', {})
         </div>
