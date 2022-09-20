@@ -8,10 +8,39 @@
     &__container {
     }
     &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 50, 30);
+        }
     }
     &__title {
+        color: $black;
+        font-weight: 700;
+        font-size: rem(30);
+        letter-spacing: 0.05em;
     }
     &__more {
+        color: rgba(20, 20, 20, 0.58);
+        font-weight: 600;
+        font-size: rem(18);
+        display: inline-flex;
+        align-items: center;
+        gap: em(15, 18);
+        transition: color 0.3s ease 0s;
+        &::after {
+            @extend %ic;
+            content: '\e900';
+            color: $orange;
+            transform: rotate(-90deg);
+            font-size: em(7, 18);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: rgba(20, 20, 20, 1);
+            }
+        }
     }
 }
 .products {
