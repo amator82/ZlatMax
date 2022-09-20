@@ -46,19 +46,22 @@ function initSliders() {
         })
     }
 
-    if (document.querySelector('.products__slider')) {
-        new Swiper('.products__slider', {
-            modules: [Pagination],
+    if (document.querySelector('.products-slider__slider')) {
+        new Swiper('.products-slider__slider', {
+            modules: [Pagination,Autoplay],
             observeParents: true,
             slidesPerView: 4,
             // loop: true,
             watchOverflow: true,
             spaceBetween: 30,
             speed: 800,
-            parallax: true,
             pagination: {
                 el: '.products-slider__dotts',
                 clickable: true
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
             },
             on: {
                 // init: function(swiper){
