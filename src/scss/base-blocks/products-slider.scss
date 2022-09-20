@@ -45,6 +45,8 @@
 }
 .products {
     &__slider {
+        padding: rem(15);
+        margin: 0px rem(-15);
     }
     &__wrapper {
     }
@@ -52,50 +54,91 @@
     }
 }
 .product-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    background: #fefefe;
+    transition: box-shadow 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
+        }
+    }
     &__image-ibg {
+        padding-bottom: percent(295, 375);
         &_contain {
         }
     }
     &__body {
+        padding: rem(20);
     }
     &__title {
+        font-weight: 600;
+        font-size: rem(20);
+        line-height: math.div(34, 20);
+        color: $black;
+        &:not(:last-child) {
+            margin-bottom: em(10, 20);
+        }
     }
     &__link-title {
     }
     &__info {
+        &:not(:last-child) {
+            margin-bottom: em(15, 16);
+        }
+    }
+    &__rating {
+        &:not(:last-child) {
+            margin-bottom: rem(26);
+        }
     }
     &__footer {
+        border-top: 1px solid rgba(20, 20, 20, 0.5);
+        padding: rem(20) 0px;
+        display: flex;
+        align-items: center;
+        gap: rem(15);
     }
     &__price {
+        flex: 1 1 auto;
+        @extend .product-card__title;
+    }
+    &__compare,
+    &__favorite {
+        font-size: rem(24);
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $orange;
+            }
+        }
     }
     &__compare {
     }
     &__favorite {
     }
     &__cart {
+        span {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            &::before {
+                margin: 0px 0px 0px rem(16);
+            }
+        }
     }
 }
 .info-product-card {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(10);
+    font-weight: 600;
+    font-size: rem(16);
+    // line-height: math.div(34, 16);
+    color: #ababab;
     &__size {
     }
     &__materials {
-    }
-    &__rating {
-    }
-}
-.rating {
-    &_set {
-    }
-    &__body {
-    }
-    &__active {
-    }
-    &__items {
-    }
-    &__item {
-    }
-    &__value {
-    }
-    &__info {
     }
 }
