@@ -7,8 +7,10 @@
                 @@include('html/home/main-block.html', {})
                 @@include('html/home/catalog.html', {})
                 <section class="page__hits-products hits-products">
-                    @@include('html/base/products-slider.html', { "title":"Хиты продаж", 
-                    "main-link": "Перейти в каталог" })
+                    @@include('html/base/products-slider.html', { "title":"Хиты продаж", "main-link": "Перейти в каталог" })
+                </section>
+                <section class="page__new-products new-products">
+                    @@include('html/base/new-products.html', { "title":"Хиты продаж" })
                 </section>
             </main>
             @@include('html/base/footer.html', {})
