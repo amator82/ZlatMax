@@ -1,9 +1,5 @@
 @import '../base/rating.scss';
 
-.page {
-    &__products-slider {
-    }
-}
 .products-slider {
     &__container {
     }
@@ -202,7 +198,6 @@
     gap: rem(10);
     font-weight: 600;
     font-size: rem(16);
-    // line-height: math.div(34, 16);
     color: #ababab;
     &__size {
     }
