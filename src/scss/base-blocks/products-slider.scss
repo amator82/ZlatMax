@@ -50,12 +50,14 @@
         }
     }
     &__dotts {
+        margin: 0 auto;
+        overflow: hidden;
         display: grid;
         grid-auto-flow: column;
         justify-content: center;
-        gap: rem(15);
         transform: translate(0px, 10%);
         .swiper-pagination-bullet {
+            margin: 0px rem(7.5);
             cursor: pointer;
             height: rem(30);
             width: rem(18);
@@ -84,11 +86,10 @@
             }
         }
         .swiper-pagination-bullet-active {
-            width: rem(30);
             &::before {
                 transition: left 3s linear 0s;
                 opacity: 1;
-                left: rem(20);
+                left: rem(8);
             }
             &::after {
                 background-color: $orange;
@@ -202,5 +203,6 @@
     &__size {
     }
     &__materials {
+        text-align: right;
     }
 }

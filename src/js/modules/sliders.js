@@ -48,7 +48,7 @@ function initSliders() {
 
     if (document.querySelector('.products-slider__slider')) {
         new Swiper('.products-slider__slider', {
-            modules: [Pagination,Autoplay],
+            modules: [Pagination, Autoplay],
             observeParents: true,
             slidesPerView: 4,
             // loop: true,
@@ -57,15 +57,34 @@ function initSliders() {
             speed: 800,
             pagination: {
                 el: '.products-slider__dotts',
-                clickable: true
+                clickable: true,
+                dynamicBullets: true
             },
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false
             },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1370: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                }
+            },
             on: {
                 // init: function(swiper){
-
                 // }
             }
         })
