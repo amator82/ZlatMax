@@ -212,7 +212,6 @@ h6 {
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
-  transform: translate(0px, 10%);
 }
 .dotts .swiper-pagination-bullet {
   margin: 0px 0.46875rem;
@@ -2003,27 +2002,38 @@ body::after {
 }
 
 .products-new {
+  padding: 2.8125rem 0px 0px 0px;
+  position: relative;
   background: url("../../img/base/new-products/bg.jpg") bottom/cover no-repeat;
 }
+.products-new::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  height: 2.875rem;
+  top: 0;
+  right: 0;
+  width: 53.6458333333%;
+}
 @supports (padding-top: clamp( 1.25rem , 0.7115384615rem  +  2.6923076923vw , 3.4375rem )) {
-  .products-new {
+  .products-new__inner {
     padding-top: clamp( 1.25rem , 0.7115384615rem  +  2.6923076923vw , 3.4375rem );
   }
 }
 @supports not (padding-top: clamp( 1.25rem , 0.7115384615rem  +  2.6923076923vw , 3.4375rem )) {
-  .products-new {
+  .products-new__inner {
     padding-top: calc(
             1.25rem + 2.1875 * (100vw - 20rem) / 81.25
         );
   }
 }
 @supports (padding-bottom: clamp( 1.25rem , 0.7115384615rem  +  2.6923076923vw , 3.4375rem )) {
-  .products-new {
+  .products-new__inner {
     padding-bottom: clamp( 1.25rem , 0.7115384615rem  +  2.6923076923vw , 3.4375rem );
   }
 }
 @supports not (padding-bottom: clamp( 1.25rem , 0.7115384615rem  +  2.6923076923vw , 3.4375rem )) {
-  .products-new {
+  .products-new__inner {
     padding-bottom: calc(
             1.25rem + 2.1875 * (100vw - 20rem) / 81.25
         );
@@ -2045,11 +2055,9 @@ body::after {
         );
   }
 }
-.products-new__body::before {
-  content: "";
-  background: url("../../img/base/new-products/bg.jpg") 0 0 no-repeat;
-  height: 100%;
-  width: 100vw;
+.products-new__section {
+  position: relative;
+  z-index: 2;
 }
 .products-new__title {
   color: #fff;
@@ -2082,7 +2090,11 @@ body::after {
 .products-new__link::before {
   margin: 0px 0px 0px 1.25rem;
 }
-.products-new__slider {
+.products-new__content {
   min-width: 0;
   padding: 2.3125rem 0px 0px 0px;
+}
+.products-new__dotts {
+  position: relative;
+  z-index: 2;
 }
