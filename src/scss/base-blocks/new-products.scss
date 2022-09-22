@@ -18,10 +18,11 @@
     }
     &__container {
         display: grid;
-        grid-template-columns: percent(400, 1600) 1fr;
+        grid-template-columns: rem(400) 1fr;
+        align-items: start;
     }
     &__body {
-        @include adaptiveValue('padding-right', 70, 30);
+        @include adaptiveValue('padding-right', 70, 20, 1630, 992, 1);
     }
     &__section {
         position: relative;
@@ -58,6 +59,9 @@
     &__slider {
     }
     &__wrapper {
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 50, 20);
+        }
     }
     &__slide {
     }
