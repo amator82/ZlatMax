@@ -1,0 +1,53 @@
+.products-new {
+    background: url('../../img/base/new-products/bg.jpg') bottom / cover
+        no-repeat;
+    @include adaptiveValue('padding-top', 55, 20);
+    @include adaptiveValue('padding-bottom', 55, 20);
+    &__container {
+        display: grid;
+        grid-template-columns: percent(400, 1600) 1fr;
+    }
+    &__body {
+        @include adaptiveValue('padding-right', 70, 30);
+        &::before {
+            content: '';
+            background: url('../../img/base/new-products/bg.jpg') 0 0 no-repeat;
+            height: 100%;
+            width: 100vw;
+        }
+    }
+    &__title {
+        color: #fff;
+        font-weight: bold;
+        font-size: rem(30);
+        line-height: math.div(46, 30);
+        letter-spacing: 0.05em;
+        &:not(:last-child) {
+            margin-bottom: em(30, 30);
+        }
+    }
+    &__text {
+        font-size: rem(18);
+        line-height: math.div(27, 18);
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.7);
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 60, 20);
+        }
+    }
+    &__link {
+        &::before {
+            margin: 0px 0px 0px rem(20);
+        }
+    }
+    &__slider {
+        min-width: 0;
+        padding: rem(37) 0px 0px 0px;
+    }
+    &__wrapper {
+    }
+    &__slide {
+    }
+    &__dotts {
+    }
+}
