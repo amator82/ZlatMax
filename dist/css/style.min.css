@@ -206,6 +206,52 @@ h6 {
   }
 }
 
+.dotts {
+  margin: 0 auto;
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  transform: translate(0px, 10%);
+}
+.dotts .swiper-pagination-bullet {
+  margin: 0px 0.46875rem;
+  cursor: pointer;
+  height: 1.875rem;
+  width: 1.125rem;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.dotts .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translate(0px, -50%);
+  background-color: #e8aa31;
+  opacity: 0;
+}
+.dotts .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  height: 0.125rem;
+  width: 100%;
+  top: 50%;
+  transform: translate(0px, -50%);
+  background-color: #898989;
+}
+.dotts .swiper-pagination-bullet-active::before {
+  transition: left 3s linear 0s;
+  opacity: 1;
+  left: 0.5rem;
+}
+.dotts .swiper-pagination-bullet-active::after {
+  background-color: #e8aa31;
+}
+
 body {
   color: #000;
   font-size: 1.125rem;
@@ -1815,52 +1861,6 @@ body::after {
     color: rgb(20, 20, 20);
   }
 }
-.products-slider__dotts {
-  margin: 0 auto;
-  overflow: hidden;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: center;
-  transform: translate(0px, 10%);
-}
-.products-slider__dotts .swiper-pagination-bullet {
-  margin: 0px 0.46875rem;
-  cursor: pointer;
-  height: 1.875rem;
-  width: 1.125rem;
-  position: relative;
-  transition: all 0.3s ease 0s;
-}
-.products-slider__dotts .swiper-pagination-bullet::before {
-  content: "";
-  position: absolute;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-radius: 50%;
-  top: 50%;
-  left: 0;
-  transform: translate(0px, -50%);
-  background-color: #e8aa31;
-  opacity: 0;
-}
-.products-slider__dotts .swiper-pagination-bullet::after {
-  content: "";
-  position: absolute;
-  height: 0.125rem;
-  width: 100%;
-  top: 50%;
-  transform: translate(0px, -50%);
-  background-color: #898989;
-}
-.products-slider__dotts .swiper-pagination-bullet-active::before {
-  transition: left 3s linear 0s;
-  opacity: 1;
-  left: 0.5rem;
-}
-.products-slider__dotts .swiper-pagination-bullet-active::after {
-  background-color: #e8aa31;
-}
-
 .product-card {
   display: grid;
   grid-template-rows: auto 1fr;

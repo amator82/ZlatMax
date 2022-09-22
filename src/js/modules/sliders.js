@@ -89,7 +89,52 @@ function initSliders() {
             }
         })
     }
+
+    if (document.querySelector('.products-new')) {
+        new Swiper('.products-new__slider', {
+            modules: [Pagination, Autoplay],
+            observeParents: true,
+            slidesPerView: 3,
+            // loop: true,
+            watchOverflow: true,
+            spaceBetween: 30,
+            speed: 800,
+            pagination: {
+                el: '.products-new__dotts',
+                clickable: true,
+                dynamicBullets: true
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1370: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            on: {
+                // init: function(swiper){
+                // }
+            }
+        })
+    }
 }
+
 function initSlidersScroll() {
     let sliderScrollItems = document.querySelectorAll('.swiper_scroll')
     if (sliderScrollItems.length > 0) {
