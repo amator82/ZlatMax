@@ -3,4 +3,3 @@ node_modules/
 **/*.zip
 node_modules/
 version.json
-gulp/
