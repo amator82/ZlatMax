@@ -30,6 +30,12 @@
     display: flex;
     height: 100%;
     flex-direction: column;
+    transition: box-shadow 0.3s ease 0s;
+    @media (any-hover: hover){
+        &:hover{
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
+        }
+    }
     &__image-ibg {
         padding-bottom: percent(200, 376);
     }
