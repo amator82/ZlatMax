@@ -4,11 +4,14 @@
     &__container {
     }
     &__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 50, 30);
+        }
+        @media (min-width: $mobile) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(20);
         }
     }
     &__title {
@@ -23,7 +26,7 @@
     }
     &__wrapper {
         &:not(:last-child) {
-            margin-bottom: rem(50);
+            @include adaptiveValue('margin-bottom', 50, 30);
         }
     }
     &__slide {
@@ -102,6 +105,7 @@
         }
     }
     &__rating {
+        align-items: center;
         justify-content: space-between;
         &:not(:last-child) {
             margin-bottom: rem(26);
