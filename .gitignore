@@ -2,6 +2,5 @@ node_modules/
 .vscode/
 **/*.zip
 node_modules/
-package-lock.json
 version.json
 gulp/
