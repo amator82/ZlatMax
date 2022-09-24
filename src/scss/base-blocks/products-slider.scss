@@ -19,6 +19,7 @@
         font-weight: 700;
         font-size: rem(30);
         letter-spacing: 0.05em;
+        line-height: math.div(46, 30);
     }
     &__slider {
         padding: rem(15) rem(20);
