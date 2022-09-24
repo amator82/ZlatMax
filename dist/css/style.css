@@ -306,6 +306,37 @@ body._lock {
         );
   }
 }
+.hits-products_no-top {
+  padding-top: 0;
+}
+
+@supports (padding-top: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem )) {
+  .sale-products {
+    padding-top: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem );
+  }
+}
+@supports not (padding-top: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem )) {
+  .sale-products {
+    padding-top: calc(
+            2.5rem + 5 * (100vw - 20rem) / 81.25
+        );
+  }
+}
+@supports (padding-bottom: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem )) {
+  .sale-products {
+    padding-bottom: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem );
+  }
+}
+@supports not (padding-bottom: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem )) {
+  .sale-products {
+    padding-bottom: calc(
+            2.5rem + 5 * (100vw - 20rem) / 81.25
+        );
+  }
+}
+.sale-products_no-bottom {
+  padding-bottom: 0;
+}
 
 body::after {
   content: "";

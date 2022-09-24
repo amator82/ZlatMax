@@ -10,7 +10,22 @@
                     @@include('html/base/products-slider.html', { "title":"Хиты продаж", "main-link": "Перейти в каталог" })
                 </section>
                 <section class="page__new-products new-products">
-                    @@include('html/base/new-products.html', { "title":"Хиты продаж" })
+                    @@include('html/base/new-products.html', { "title":"Новинки" })
+                </section>
+                <section class="page__hits-products sale-products sale-products_no-bottom">
+                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
+                </section>
+                <section class="page__sale-products sale-products">
+                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
+                </section>
+                <section class="page__new-products new-products new-products_no-top">
+                    @@include('html/base/new-products.html', { "title":"Новинки" })
+                </section>
+                <section class="page__hits-products sale-products sale-products_no-bottom">
+                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
+                </section>
+                <section class="page__sale-products sale-products">
+                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
                 </section>
             </main>
             @@include('html/base/footer.html', {})
