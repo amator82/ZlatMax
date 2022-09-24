@@ -1,0 +1,64 @@
+.page {
+    &__articles-module {
+    }
+}
+.articles-module {
+    @include adaptiveValue('padding-bottom', 120, 40);
+    &__container {
+    }
+    &__title {
+        color: $black;
+        font-weight: 700;
+        font-size: rem(30);
+        letter-spacing: 0.05em;
+        line-height: math.div(46, 30);
+        &:not(:last-child) {
+            margin-bottom: em(30, 30);
+        }
+    }
+    &__items {
+        display: grid;
+        gap: rem(30);
+        grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+    }
+    &__item {
+    }
+}
+.item-article {
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    &__image-ibg {
+        padding-bottom: percent(200, 376);
+    }
+    &__body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue('padding', 25, 15);
+    }
+    &__title {
+        flex: 1 1 auto;
+        &:not(:last-child) {
+            margin-bottom: em(8, 20);
+        }
+    }
+    &__link-title {
+        font-weight: 600;
+        font-size: rem(20);
+        line-height: math.div(34, 20);
+        color: $black;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__date {
+        font-size: rem(16);
+        line-height: math.div(24, 16);
+        color: #ababab;
+    }
+}

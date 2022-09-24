@@ -1867,6 +1867,7 @@ body::after {
   font-weight: 700;
   font-size: 1.875rem;
   letter-spacing: 0.05em;
+  line-height: 1.5333333333;
 }
 .products-slider__slider {
   padding: 0.9375rem 1.25rem;
@@ -2173,4 +2174,81 @@ body::after {
 .products-new__dotts {
   position: relative;
   z-index: 2;
+}
+
+@supports (padding-bottom: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem )) {
+  .articles-module {
+    padding-bottom: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem );
+  }
+}
+@supports not (padding-bottom: clamp( 2.5rem , 1.2692307692rem  +  6.1538461538vw , 7.5rem )) {
+  .articles-module {
+    padding-bottom: calc(
+            2.5rem + 5 * (100vw - 20rem) / 81.25
+        );
+  }
+}
+.articles-module__title {
+  color: #141414;
+  font-weight: 700;
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
+  line-height: 1.5333333333;
+}
+.articles-module__title:not(:last-child) {
+  margin-bottom: 1em;
+}
+.articles-module__items {
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
+}
+.item-article {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.item-article__image-ibg {
+  padding-bottom: 53.1914893617%;
+}
+.item-article__body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+@supports (padding: clamp( 0.9375rem , 0.7836538462rem  +  0.7692307692vw , 1.5625rem )) {
+  .item-article__body {
+    padding: clamp( 0.9375rem , 0.7836538462rem  +  0.7692307692vw , 1.5625rem );
+  }
+}
+@supports not (padding: clamp( 0.9375rem , 0.7836538462rem  +  0.7692307692vw , 1.5625rem )) {
+  .item-article__body {
+    padding: calc(
+            0.9375rem + 0.625 * (100vw - 20rem) / 81.25
+        );
+  }
+}
+.item-article__title {
+  flex: 1 1 auto;
+}
+.item-article__title:not(:last-child) {
+  margin-bottom: 0.4em;
+}
+.item-article__link-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #141414;
+}
+@media (any-hover: hover) {
+  .item-article__link-title:hover {
+    text-decoration: underline;
+  }
+}
+.item-article__date {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ababab;
 }
