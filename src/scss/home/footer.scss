@@ -1,4 +1,5 @@
 .footer {
+    background-color: $black;
     &__text {
         background: url('../../img/base/footer/background.png') top / cover
             no-repeat;
@@ -27,5 +28,53 @@
         color: #fff;
         @include adaptiveValue('font-size', 18, 16);
         line-height: math.div(27, 18);
+    }
+}
+.body-footer {
+    @include adaptiveValue('padding-top', 100, 40);
+    @include adaptiveValue('padding-bottom', 50, 40);
+    display: grid;
+    gap: rem(35);
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
+        gap: rem(20);
+        &:not(:last-child) {
+            padding: 0px rem(30) 0px 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+    &__item {
+    }
+}
+.item-footer {
+    &__spoller {
+    }
+}
+.spoller-item-footer {
+    &__item {
+    }
+    &__title {
+        text-transform: uppercase;
+        color: #fff;
+        line-height: math.div(22, 18);
+        &:not(:last-child) {
+            margin-bottom: em(30, 18);
+        }
+    }
+    &__body {
+    }
+}
+.menu-footer {
+    &__list {
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: em(20, 18);
+        }
+    }
+    &__link {
+        line-height: math.div(27, 18);
+        color: rgba(255, 255, 255, 0.8);
     }
 }
