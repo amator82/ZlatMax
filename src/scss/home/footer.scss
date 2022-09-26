@@ -1,0 +1,31 @@
+.footer {
+    &__text {
+        background: url('../../img/base/footer/background.png') top / cover
+            no-repeat;
+    }
+    &__container {
+    }
+    &__body {
+    }
+}
+.text-footer {
+    @include adaptiveValue('padding-top', 60, 40);
+    @include adaptiveValue('padding-bottom', 60, 40);
+    &__container {
+    }
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        line-height: math.div(46, 30);
+        color: $orange;
+        @include adaptiveValue('font-size', 30, 24);
+        &:not(:last-child) {
+            margin-bottom: em(30, 30);
+        }
+    }
+    &__text {
+        color: #fff;
+        @include adaptiveValue('font-size', 18, 16);
+        line-height: math.div(27, 18);
+    }
+}
