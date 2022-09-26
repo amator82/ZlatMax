@@ -354,6 +354,11 @@ export function MTR(message) {
 }
 
 //! <Обработа медиа запросов из атрибутов>
+export function uniqArray(array) {
+	return array.filter(function (item, index, self) {
+		return self.indexOf(item) === index;
+	});
+}
 export function dataMediaQueries(array, dataSetValue) {
     // Получение объектов с медиа запросами
     const media = Array.from(array).filter(function (item, index, self) {

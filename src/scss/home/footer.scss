@@ -37,8 +37,8 @@
     gap: rem(35);
     &__row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
-        gap: rem(20);
+        grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+        gap: rem(40);
         &:not(:last-child) {
             padding: 0px rem(30) 0px 0px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
