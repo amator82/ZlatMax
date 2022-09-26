@@ -7,28 +7,49 @@
                 @@include('html/home/main-block.html', {})
                 @@include('html/home/catalog.html', {})
                 <section class="page__hits-products hits-products">
-                    @@include('html/base/products-slider.html', { "title":"Хиты продаж", "main-link": "Перейти в каталог" })
+                    @@include('html/base/products-slider.html', { "title":"Хиты продаж",
+                    "main-link": "Перейти в каталог",
+                    "img": "@img/base/product-card/image.png"
+                })
                 </section>
                 <section class="page__new-products new-products">
                     @@include('html/base/new-products.html', { "title":"Новинки" })
                 </section>
                 <section class="page__sale-products sale-products sale-products_no-bottom">
-                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
+                    @@include('html/base/products-slider.html', { "title":"Акции", 
+                    "main-link": "Все акции",
+                    "img": "@img/base/product-card/image.png"
+                })
                 </section>
                 <section class="page__sale-products sale-products">
-                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
+                    @@include('html/base/products-slider.html', { "title":"Акции", 
+                    "main-link": "Все акции",
+                    "img": "@img/base/product-card/image.png"
+                })
                 </section>
                 <section class="page__new-products new-products new-products_no-top">
                     @@include('html/base/new-products.html', { "title":"Новинки" })
                 </section>
                 <section class="page__sale-products sale-products sale-products_no-bottom">
-                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
+                    @@include('html/base/products-slider.html', { "title":"Акции", 
+                    "main-link": "Все акции",
+                    "img": "@img/base/product-card/image.png"
+                })
                 </section>
                 <section class="page__sale-products sale-products">
-                    @@include('html/base/products-slider.html', { "title":"Акции", "main-link": "Все акции" })
+                    @@include('html/base/products-slider.html', { "title":"Акции",
+                    "main-link": "Все акции",
+                    "img": "@img/base/product-card/image.png"
+                })
                 </section>
-                    @@include('html/home/articles-module.html', {})
-                    @@include('html/home/products-block.html', {})
+                @@include('html/home/articles-module.html', {})
+                @@include('html/home/products-block.html', {})
+                <section class="page__hits-products hits-products">
+                    @@include('html/base/products-slider.html', { "title":"Фонари", 
+                    "main-link": "Перейти в каталог",
+                    "img": "@img/base/product-card/image-02.png"    
+                })
+                </section>
             </main>
             @@include('html/base/footer.html', {})
         </div>
