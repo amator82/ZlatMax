@@ -1,3 +1,10 @@
+import { SelectConstructor } from './select.js'
+
+export const formsModules = {
+    inputMaskModule: null,
+    selectModule: null
+}
+
 export function formRating() {
     const ratings = document.querySelectorAll('.rating')
     if (ratings.length > 0) {
@@ -346,4 +353,9 @@ export function formSubmit(options = { validate: true }) {
     function formLogging(message) {
         FLS(`[Формы]: ${message}`)
     }
+}
+export function formSelect(logging) {
+    formsModules.selectModule = new SelectConstructor({
+        logging: logging
+    })
 }
