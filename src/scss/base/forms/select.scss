@@ -132,6 +132,7 @@
                 font-size: rem(8);
                 content: '\e900';
                 @extend %ic;
+                margin-left: em(10, 8);
             }
         }
         .select__option {
