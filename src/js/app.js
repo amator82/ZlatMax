@@ -12,3 +12,5 @@ import './modules/script.js'
 
 import * as mtrForms from './modules/forms.js'
 mtrForms.formRating()
+mtrForms.formFieldsInit()
+mtrForms.formSubmit()
