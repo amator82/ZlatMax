@@ -34,7 +34,7 @@
     @include adaptiveValue('padding-top', 100, 40);
     @include adaptiveValue('padding-bottom', 50, 40);
     display: grid;
-    @include adaptiveValue('gap', 40, 20);
+    @include adaptiveValue('gap', 35, 25);
     &__row {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
@@ -46,6 +46,24 @@
         }
     }
     &__item {
+    }
+    &__bottom {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: rem(14);
+        line-height: math.div(27, 14);
+        @media (min-width: em(1200)) {
+            display: flex;
+            justify-content: space-between;
+            gap: rem(20);
+        }
+    }
+    &__rules {
+        max-width: rem(820);
+    }
+    &__copyright {
+        span {
+            white-space: nowrap;
+        }
     }
 }
 .item-footer {
