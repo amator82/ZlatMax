@@ -1,7 +1,3 @@
-.page {
-    &__products-block {
-    }
-}
 .products-block {
     @include adaptiveValue('margin-bottom', 120, 40);
     &__container {

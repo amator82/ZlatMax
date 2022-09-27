@@ -1,7 +1,3 @@
-.page {
-    &__catalog-cards {
-    }
-}
 .catalog-cards {
     @include adaptiveValue('padding-top', 100, 40);
     @include adaptiveValue('padding-bottom', 70, 40);

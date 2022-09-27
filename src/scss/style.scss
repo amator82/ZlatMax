@@ -82,20 +82,6 @@ body {
         }
     }
 }
-.hits-products {
-    @include adaptiveValue('padding-top', 50, 40);
-    @include adaptiveValue('padding-bottom', 120, 40);
-    &_no-top{
-        padding-top: 0;
-    }
-}
-.sale-products {
-    @include adaptiveValue('padding-top', 120, 40);
-    @include adaptiveValue('padding-bottom', 120, 40);
-    &_no-bottom {
-        padding-bottom: 0;
-    }
-}
 //! </Основная сетка>
 
 @import './base/popup.scss';
@@ -104,12 +90,5 @@ body {
 @import './base/spollers.scss';
 
 //! <Подключение блоков>
-@import './home/header.scss';
-@import './home/main-block.scss';
-@import './home/catalog.scss';
-@import './base-blocks/products-slider.scss';
-@import './base-blocks/new-products.scss';
-@import './home/articles-module.scss';
-@import './home/products-block.scss';
-@import './home/footer.scss';
+@import './home.scss'
 //! </Подключение блоков>

@@ -1,7 +1,3 @@
-.page {
-    &__articles-module {
-    }
-}
 .articles-module {
     @include adaptiveValue('margin-bottom', 120, 40);
     &__container {
