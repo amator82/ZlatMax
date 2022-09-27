@@ -1,13 +1,3 @@
-.page {
-    &__main-block {
-    }
-    &__catalog-cards {
-    }
-    &__articles-module {
-    }
-    &__products-block {
-    }
-}
 .hits-products {
     @include adaptiveValue('padding-top', 50, 40);
     @include adaptiveValue('padding-bottom', 120, 40);

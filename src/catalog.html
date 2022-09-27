@@ -1,0 +1,48 @@
+<html lang="en">
+    @@include('html/base/head.html', {'title': 'Каталог'})
+    <body>
+        <div class="wrapper">
+            @@include('html/base/header.html', {})
+            <main class="page page_inner">
+                <div class="page__header">
+                    <div class="page__container">
+                        <h1 class="page__title title">Разделочные ножи</h1>
+                        <nav class="page__breadcrumbs breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a
+                                        href="index.html"
+                                        target="_blank"
+                                        class="breadcrumbs__link"
+                                        >Главная</a
+                                    >
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__current"
+                                        >Разделочные ножи</span
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="catalog">
+                    <div class="catalog__container">
+                        <div class="catalog__control">
+                            <select name="form[]" class="form">
+                                <option value="1" selected>
+                                    По популярности
+                                </option>
+                                <option value="2">По цене</option>
+                                <option value="3">По названию</option>
+                                <option value="4">По релевантности</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/base/footer.html', {})
+        </div>
+        @@include('html/base/popup.html', {}) @@include('html/base/js.html', {})
+    </body>
+</html>

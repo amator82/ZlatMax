@@ -2,7 +2,6 @@
 @import './base/mixins.scss';
 //! <Подключение шрифтов>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap');
-// @import './base/fonts.scss';
 //! </Подключение шрифтов>
 
 //! <Иконочные шрифты>
@@ -90,5 +89,25 @@ body {
 @import './base/spollers.scss';
 
 //! <Подключение блоков>
-@import './home.scss'
+@import './home.scss';
+@import './catalog.scss';
 //! </Подключение блоков>
+
+.page{
+    &_home{
+    }
+    &_inner{
+        padding-top: rem(30);
+    }
+    &__header{
+        margin-bottom: rem(30);
+    }
+    &__main-block {
+    }
+    &__catalog-cards {
+    }
+    &__articles-module {
+    }
+    &__products-block {
+    }
+}
