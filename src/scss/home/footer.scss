@@ -83,17 +83,89 @@
         @include adaptiveValue('padding-top', 30, 20);
         @include adaptiveValue('padding-bottom', 30, 20);
     }
+    &__text {
+        line-height: math.div(27, 18);
+        color: #fff;
+        a {
+            color: $orange;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 .menu-footer {
     &__list {
     }
     &__item {
+        line-height: 1.5;
+        display: flex;
+        color: rgba(255, 255, 255, 0.8);
         &:not(:last-child) {
             margin-bottom: em(20, 18);
         }
+        &::before {
+            font-size: rem(20);
+            margin: em(5, 15) em(10, 15) 0px 0px;
+        }
     }
     &__link {
+        display: inline-flex;
         line-height: math.div(27, 18);
         color: rgba(255, 255, 255, 0.8);
+        &::before {
+            font-size: rem(20);
+            margin: em(5, 15) em(10, 15) 0px 0px;
+        }
+        &._icon-footer-email {
+            &::before {
+                font-size: rem(13);
+            }
+        }
+    }
+}
+.footer-subscribe {
+    &__label {
+        display: block;
+        line-height: math.div(22, 18);
+        color: #fff;
+        &:not(:last-child) {
+            margin-bottom: em(10, 18);
+        }
+    }
+    &__line {
+        position: relative;
+        display: flex;
+        .form__error {
+            position: absolute;
+            bottom: -15px;
+            font-size: rem(10);
+            color: red;
+        }
+    }
+    &__input {
+        background: rgba(255, 255, 255, 0.05);
+        height: rem(48);
+        padding: 0px rem(20);
+        color: rgba(255, 255, 255, 0.52);
+        width: 100%;
+        border: 1px solid #fff;
+        border-right: none;
+        border-radius: rem(3) 0px 0px rem(3);
+    }
+    &__button {
+        flex: 0 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $orange;
+        border-radius: 0px rem(3) rem(3) 0px;
+        &::before {
+            color: #fff;
+            font-size: rem(8);
+            transform: rotate(-90deg);
+        }
     }
 }
