@@ -9,6 +9,7 @@ import './modules/dynamic_adapt.js'
 import './modules/tippy.js'
 import './modules/sliders.js'
 import './modules/script.js'
+import './modules/range.js'
 
 import * as mtrForms from './modules/forms.js'
 mtrForms.formRating()

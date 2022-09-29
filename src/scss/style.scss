@@ -89,19 +89,20 @@ body {
 @import './base/spollers.scss';
 @import './base/forms/rating.scss';
 @import './base/forms/select.scss';
+@import './base/forms/range.scss';
 
 //! <Подключение блоков>
 @import './home.scss';
 @import './catalog.scss';
 //! </Подключение блоков>
 
-.page{
-    &_home{
+.page {
+    &_home {
     }
-    &_inner{
+    &_inner {
         padding-top: rem(30);
     }
-    &__header{
+    &__header {
         margin-bottom: rem(30);
     }
     &__main-block {
