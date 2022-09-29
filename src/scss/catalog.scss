@@ -3,6 +3,7 @@
     &__container {
     }
     &__body {
+        align-items: start;
         display: grid;
         grid-template-columns: rem(375) 1fr;
         gap: rem(30);
@@ -73,10 +74,26 @@
         }
     }
     &__body {
+        padding: rem(30) 0px 0px 0px;
     }
     &__inputs {
+        display: flex;
+        border: 1px solid #cbcbcb;
+        border-radius: rem(3);
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-bottom: rem(50);
+        }
     }
     &__input {
+        height: rem(42);
+        width: 50%;
+        border-left: 1px solid #cbcbcb;
+        text-align: center;
+        padding: 0px rem(15);
+        &:not(:last-child) {
+            border-right: 1px solid #cbcbcb;
+        }
     }
     &__range {
     }

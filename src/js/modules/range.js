@@ -18,6 +18,10 @@ export function rangeInit() {
                     max: [Number(toValue.dataset.rangeTo)]
                 }
             })
+            item.noUiSlider.on('update', function (values, handle) {
+                fromValue.value = values[handle],
+                toValue.value = values[handle]
+            })
         })
     }
 }
