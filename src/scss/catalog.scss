@@ -57,7 +57,7 @@
     &__items {
         @media (max-width: $tablet) {
             display: none;
-            &._active{
+            &._active {
                 display: block;
             }
         }
@@ -102,11 +102,10 @@
     &__input {
         height: rem(42);
         width: 50%;
-        border-left: 1px solid #cbcbcb;
         text-align: center;
         padding: 0px rem(15);
-        &:not(:last-child) {
-            border-right: 1px solid #cbcbcb;
+        &:not(:first-child) {
+            border-left: 1px solid #cbcbcb;
         }
     }
     &__range {
