@@ -79,6 +79,17 @@ function documentActions(e) {
                   .classList.remove('_sub-menu-open')
             : null
         e.preventDefault()
-
     }
+}
+
+if (document.querySelector('.filter-catalog__title')) {
+    document
+        .querySelector('.filter-catalog__title')
+        .addEventListener('click', function (e) {
+            if (window.innerWidth < 992) {
+                document
+                    .querySelector('.filter-catalog__items')
+                    .classList.toggle('_active')
+            }
+        })
 }

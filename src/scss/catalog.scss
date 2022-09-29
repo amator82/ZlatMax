@@ -5,8 +5,10 @@
     &__body {
         align-items: start;
         display: grid;
-        grid-template-columns: rem(375) 1fr;
         gap: rem(30);
+        @media (min-width: $tablet) {
+            grid-template-columns: rem(375) 1fr;
+        }
     }
     &__filter {
     }
@@ -22,7 +24,7 @@
     &__products {
         display: grid;
         gap: rem(30);
-        grid-template-columns: repeat(auto-fill, minmax(rem(290), rem(375)));
+        grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 60, 30);
         }
@@ -31,6 +33,9 @@
         display: flex;
         justify-content: space-between;
         gap: rem(20);
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
     &__more {
     }
@@ -41,6 +46,7 @@
     background: #fefefe;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     &__title {
+        width: 100%;
         background-color: $black;
         font-weight: bold;
         font-size: rem(20);
@@ -49,6 +55,12 @@
         color: #fff;
     }
     &__items {
+        @media (max-width: $tablet) {
+            display: none;
+            &._active{
+                display: block;
+            }
+        }
     }
     &__price {
     }
