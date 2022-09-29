@@ -8,9 +8,9 @@ export function rangeInit() {
             const fromValue = rangeItem.querySelector('[data-range-from]')
             const toValue = rangeItem.querySelector('[data-range-to]')
             const item = rangeItem.querySelector('[data-range-item]')
-            
-            const input1 = document.querySelector('.price-filter__input_1')
-            const input2 = document.querySelector('.price-filter__input_2')
+
+            const input1 = rangeItem.querySelector('.filter__input_1')
+            const input2 = rangeItem.querySelector('.filter__input_2')
             const inputs = [input1, input2]
 
             noUiSlider.create(item, {
