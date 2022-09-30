@@ -88,7 +88,7 @@
         }
     }
     &__body {
-        padding: 0px rem(30) rem(30) rem(30);
+        padding: 0px rem(30) rem(50) rem(30);
     }
     &__inputs {
         display: flex;
@@ -96,7 +96,7 @@
         border-radius: rem(3);
         overflow: hidden;
         &:not(:last-child) {
-            margin-bottom: rem(50);
+            margin-bottom: rem(30);
         }
     }
     &__input {
@@ -135,6 +135,9 @@
     }
     &__body {
         padding: rem(30);
+        &_range {
+            padding: rem(30) rem(30) rem(50) rem(30);
+        }
     }
     &__checkbox {
         &:not(:last-child) {
