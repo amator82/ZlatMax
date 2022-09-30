@@ -31,8 +31,8 @@ export function rangeInit() {
                 tooltips: [moneyFormat, moneyFormat],
                 step: steps(),
                 range: {
-                    min: [Math.round(Number(fromValue.dataset.rangeFrom))],
-                    max: [Math.round(Number(toValue.dataset.rangeTo))]
+                    min: [Number(fromValue.dataset.rangeFrom)],
+                    max: [Number(toValue.dataset.rangeTo)]
                 }
             })
 
