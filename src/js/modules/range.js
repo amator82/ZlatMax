@@ -1,4 +1,5 @@
 import * as noUiSlider from 'nouislider'
+import wNumb from 'wnumb'
 
 export function rangeInit() {
     const rangeItems = document.querySelectorAll('[data-range]')
@@ -13,18 +14,30 @@ export function rangeInit() {
             const input2 = rangeItem.querySelector('.filter__input_2')
             const inputs = [input1, input2]
 
+            const moneyFormat = wNumb({
+                decimals: 0
+            })
+
+            const steps = () => {
+                if (Number(toValue.value) > 10000) {
+                    return (Number(toValue.value) * 2) / 100
+                }
+                return 1
+            }
+
             noUiSlider.create(item, {
                 start: [Number(fromValue.value), Number(toValue.value)],
                 connect: true,
-                tooltips: [true, true],
+                tooltips: [moneyFormat, moneyFormat],
+                step: steps(),
                 range: {
-                    min: [Number(fromValue.dataset.rangeFrom)],
-                    max: [Number(toValue.dataset.rangeTo)]
+                    min: [Math.round(Number(fromValue.dataset.rangeFrom))],
+                    max: [Math.round(Number(toValue.dataset.rangeTo))]
                 }
             })
 
             item.noUiSlider.on('update', function (values, handle) {
-                inputs[handle].value = values[handle]
+                inputs[handle].value = Math.round(values[handle])
             })
 
             inputs.forEach(function (input, handle) {

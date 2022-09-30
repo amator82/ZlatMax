@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "nouislider": "^15.6.1",
-    "tippy.js": "^6.3.7"
+    "tippy.js": "^6.3.7",
+    "wnumb": "^1.2.0"
   }
 }
