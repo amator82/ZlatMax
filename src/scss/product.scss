@@ -1,0 +1,39 @@
+.product {
+    &__container {
+    }
+    &__main {
+    }
+}
+.main-product {
+    display: grid;
+    grid-template-columns: percent(785, 1600) 1fr;
+    &__images {
+        padding: 0px rem(30) 0px 0px;
+    }
+}
+.images-product {
+    display: grid;
+    gap: rem(16);
+    &__slider {
+    }
+    &__wrapper {
+        &.swiper-wrapper{
+            height: auto;
+        }
+    }
+    &__slide-ibg {
+        padding-bottom: percent(577, 754);
+    }
+    &__thumbs {
+    }
+}
+.thumbs-images {
+    &__wrapper {
+        &.swiper-wrapper{
+            height: auto;
+        }
+    }
+    &__slide-ibg {
+        padding-bottom: percent(177, 754);
+    }
+}

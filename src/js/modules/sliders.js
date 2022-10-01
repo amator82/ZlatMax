@@ -1,4 +1,10 @@
-import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper'
+import Swiper, {
+    Navigation,
+    Pagination,
+    Parallax,
+    Autoplay,
+    Thumbs
+} from 'swiper'
 
 function initSliders() {
     if (document.querySelector('.main-block__slider')) {
@@ -67,7 +73,7 @@ function initSliders() {
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 10,
+                    spaceBetween: 10
                 },
                 768: {
                     slidesPerView: 2,
@@ -110,7 +116,7 @@ function initSliders() {
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 10,
+                    spaceBetween: 10
                 },
                 768: {
                     slidesPerView: 2,
@@ -128,6 +134,52 @@ function initSliders() {
             on: {
                 // init: function(swiper){
                 // }
+            }
+        })
+    }
+
+    if (document.querySelector('.thumbs-images')) {
+        const thumbsSwiper = new Swiper('.thumbs-images', {
+            modules: [Pagination, Autoplay, Thumbs],
+            observeParents: true,
+            slidesPerView: 4,
+            watchOverflow: true,
+            spaceBetween: 16,
+            speed: 800,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1330: {
+                    slidesPerView: 4,
+                    spaceBetween: 16
+                }
+            },
+            on: {
+            }
+        })
+
+        new Swiper('.images-product__slider', {
+            modules: [Pagination, Autoplay, Thumbs],
+            observeParents: true,
+            slidesPerView: 1,
+            watchOverflow: true,
+            spaceBetween: 30,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            thumbs: {
+                swiper: thumbsSwiper
+            },
+            on: {
             }
         })
     }
