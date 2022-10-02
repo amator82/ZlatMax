@@ -224,9 +224,10 @@
             padding: rem(30) 0px;
         }
     }
-    &__testimonials{}
+    &__testimonials {
+    }
 }
-.body-info {
+.characteristics-info {
     display: flex;
     column-gap: rem(30);
     row-gap: rem(40);
