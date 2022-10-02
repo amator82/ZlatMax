@@ -49,6 +49,17 @@ export function addTouchClass() {
     //* Добавление класса _touch для HTML если браузер мобильный
     if (isMobile.any()) document.documentElement.classList.add('touch')
 }
+export function fullVHfix() {
+	const fullScreens = document.querySelectorAll('[data-fullscreen]');
+	if (fullScreens.length && isMobile.any()) {
+		window.addEventListener('resize', fixHeight);
+		function fixHeight() {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		}
+		fixHeight();
+	}
+}
 //! </Проверка мобильного браузера>
 
 export let bodyLockStatus = true
@@ -109,11 +120,14 @@ export function addLoadedClass() {
         }, 0)
     })
 }
+export function setHash(hash) {
+    hash = hash ? `#${hash}` : window.location.href.split('#')[0]
+    history.pushState('', '', hash)
+}
 export function getHash() {
     if (location.hash) {
         return location.hash.replace('#', '')
-    }
-}
+    }}
 //! </Добавление loaded для HTML после полной загрузки страницы>
 
 //! <Вспомогательные модули плавного расскрытия и закрытия объекта>
