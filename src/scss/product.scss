@@ -38,7 +38,13 @@
         }
     }
     &__slide-ibg {
+        opacity: 0.5;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
         padding-bottom: percent(177, 754);
+        &.swiper-slide-thumb-active{
+            opacity: 1;
+        }
     }
 }
 .body-product {
@@ -114,6 +120,9 @@
         line-height: math.div(37, 30);
         background: url('../../img/base/footer/icons/rub.svg') right no-repeat;
         padding: 0px rem(30) 0px 0px;
+        &:not(:last-child) {
+            margin-bottom: em(35, 30);
+        }
     }
     &__row {
         display: flex;
@@ -127,15 +136,13 @@
         gap: rem(20);
     }
     &__cart {
-    }
-}
-.quantity {
-    &__button {
-        &_plus {
+        span{
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            &::before{
+                margin: 0px 0px 0px rem(20);
+            }
         }
-        &_minus {
-        }
-    }
-    &__input {
     }
 }
