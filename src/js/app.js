@@ -3,6 +3,7 @@ import * as mtrFunctions from './modules/functions.js'
 mtrFunctions.isWebp()
 mtrFunctions.menuInit();
 mtrFunctions.spollers();
+mtrFunctions.tabs();
 
 import './modules/popup.js'
 import './modules/dynamic_adapt.js'
