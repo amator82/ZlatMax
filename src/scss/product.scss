@@ -224,6 +224,8 @@
             padding: rem(30) 0px;
         }
     }
+    &__characteristics {
+    }
     &__testimonials {
     }
 }
@@ -269,6 +271,7 @@
 }
 .testimonials-info {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: rem(20);
     &__text {
