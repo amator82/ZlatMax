@@ -6,9 +6,13 @@
 }
 .main-product {
     display: grid;
+    align-items: start;
     grid-template-columns: percent(785, 1600) 1fr;
+    @include adaptiveValue('margin-bottom', 120, 40);
     &__images {
         padding: 0px rem(30) 0px 0px;
+    }
+    &__body {
     }
 }
 .images-product {
@@ -17,7 +21,7 @@
     &__slider {
     }
     &__wrapper {
-        &.swiper-wrapper{
+        &.swiper-wrapper {
             height: auto;
         }
     }
@@ -29,11 +33,109 @@
 }
 .thumbs-images {
     &__wrapper {
-        &.swiper-wrapper{
+        &.swiper-wrapper {
             height: auto;
         }
     }
     &__slide-ibg {
         padding-bottom: percent(177, 754);
+    }
+}
+.body-product {
+    background-color: #fefefe;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    padding: rem(30);
+    &__header {
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+        padding: 0px 0px rem(30) 0px;
+    }
+    &__table {
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+        padding: rem(30) 0px;
+    }
+    &__options {
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+        padding: rem(30) 0px;
+    }
+    &__actions {
+        padding: rem(30) 0px 0px 0px;
+    }
+}
+.header-product {
+    &__line {
+        display: flex;
+        gap: rem(30);
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+    &__title {
+        flex: 1 1 auto;
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: math.div(29, 24);
+        color: $black;
+    }
+    &__link {
+        font-size: rem(24);
+    }
+    &__rating {
+    }
+}
+.table-product {
+    display: grid;
+    grid-template-columns: rem(200) 1fr;
+    gap: rem(20);
+    &__label {
+        line-height: math.div(22, 18);
+        color: $black;
+    }
+    &__value {
+        line-height: math.div(22, 18);
+        color: rgba(20, 20, 20, 0.5);
+    }
+}
+.options-product {
+    display: grid;
+    grid-template-columns: rem(200) 1fr;
+    gap: rem(20);
+    &__label {
+        align-self: center;
+        color: $black;
+    }
+    &__value {
+    }
+}
+.actions-product {
+    &__price {
+        display: inline-block;
+        font-weight: 700;
+        font-size: rem(30);
+        line-height: math.div(37, 30);
+        background: url('../../img/base/footer/icons/rub.svg') right no-repeat;
+        padding: 0px rem(30) 0px 0px;
+    }
+    &__row {
+        display: flex;
+    }
+    &__quantity {
+    }
+    &__buttons {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: flex-end;
+        gap: rem(20);
+    }
+    &__cart {
+    }
+}
+.quantity {
+    &__button {
+        &_plus {
+        }
+        &_minus {
+        }
+    }
+    &__input {
     }
 }
