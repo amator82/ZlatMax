@@ -279,7 +279,7 @@
                                             class="actions-product__quantity quantity"
                                         >
                                             <div
-                                                class="quantity__button quantity__button_plus _icon-plus"
+                                                class="quantity__button quantity__button_minus _icon-minus"
                                             ></div>
                                             <div class="quantity__input">
                                                 <input
@@ -290,7 +290,7 @@
                                                 />
                                             </div>
                                             <div
-                                                class="quantity__button quantity__button_minus _icon-minus"
+                                                class="quantity__button quantity__button_plus _icon-plus"
                                             ></div>
                                         </div>
                                         <div class="actions-product__buttons">
@@ -528,6 +528,20 @@
                         </div>
                     </div>
                 </div>
+                <section
+                    class="page__hits-products hits-products hits-products_no-top"
+                >
+                    @@include('html/base/products-slider.html', {
+                    "title":"Похожие товары", "main-link": "Посмотреть все",
+                    "img": "@img/base/product-card/image.png" })
+                </section>
+                <section
+                    class="page__hits-products hits-products hits-products_no-top"
+                >
+                    @@include('html/base/products-slider.html', {
+                    "title":"Рекомендуем", "main-link": "Посмотреть все", "img":
+                    "@img/base/product-card/image.png" })
+                </section>
             </main>
             @@include('html/base/footer.html', {})
         </div>
