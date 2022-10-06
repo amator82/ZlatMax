@@ -260,7 +260,7 @@
         display: inline-flex;
         align-items: center;
         font-weight: 600;
-        @include adaptiveValue('margin-roght', 25, 0, 1620, 1400, 1);
+        @include adaptiveValue('margin-right', 25, 0, 1620, 1400, 1);
         &::before {
             font-size: rem(24);
             margin: 0px em(10, 24) 0px 0px;
