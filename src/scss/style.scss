@@ -21,7 +21,7 @@ body {
     font-size: $fontSize;
     font-family: $fontFamily;
     font-weight: 500;
-    &._lock {
+    .lock & {
         overflow: hidden;
     }
 }
@@ -82,17 +82,12 @@ body {
     }
 }
 //! </Основная сетка>
-
 @import './base/popup.scss';
-@import './base/tippy.scss';
-@import './base/swiper.scss';
 @import './base/spollers.scss';
 @import './base/tabs.scss';
-@import './base/forms/rating.scss';
-@import './base/forms/select.scss';
-@import './base/forms/range.scss';
-@import './base/forms/checkbox.scss';
-@import './base/forms/quantity.scss';
+@import './base/forms/forms.scss';
+
+@import './common/common.scss';
 
 //! <Подключение блоков>
 @import './home.scss';
